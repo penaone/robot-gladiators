@@ -55,12 +55,13 @@ if (promptFight === "fight" || promptFight === "FIGHT") {
           window.alert(playerName + " has decided to skip this fight. Goodbye!");
           // subtract money from playerMoney for skipping
           playerMoney = playerMoney - 2;
+          console.log("player money = " + playerMoney);
       }
       // if no (false), ask question again by running fight() again
       else {
           fight();
       }
-    }
+    } else
     
    {
     window.alert("You need to pick a valid option. Try again!");
@@ -69,7 +70,7 @@ if (promptFight === "fight" || promptFight === "FIGHT") {
     
 enemyHealth = enemyHealth - playerAttack;
 
-// Log a resulting message to the console sow we know that it worked.
+// Log a resulting message to the console so we know that it worked.
 console.log(playerName + " attacked " + enemyName + ". " + enemyName + " now has " + enemyHealth + " health remaining.");
 
 // Subtract the value of 'enemyAttack' fom the value of 'playerHealth' and use that result to update the value in the 'playerHealth' variable.
