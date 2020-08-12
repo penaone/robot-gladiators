@@ -55,17 +55,17 @@ if (promptFight === "fight" || promptFight === "FIGHT") {
           window.alert(playerName + " has decided to skip this fight. Goodbye!");
           // subtract money from playerMoney for skipping
           playerMoney = playerMoney - 2;
-
       }
       // if no (false), ask question again by running fight() again
       else {
           fight();
       }
+    }
     
-    window.alert(playerName + " has chosen to skip the fight!");
-  } else {
+   {
     window.alert("You need to pick a valid option. Try again!");
   }
+
     
 enemyHealth = enemyHealth - playerAttack;
 
