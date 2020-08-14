@@ -101,6 +101,11 @@ var startGame = function () {
       // pass the pickedEnemyName variable's value into the fight function, where it will assume the value of the enemyName parameter
 
       fight(pickedEnemyName);
+
+      // if player is still alive and we're not at the last enemy in the array
+      if (playerHealth > 0 && i < enemyNames.length - 1) {
+        shop();
+      }
     } else {
       window.alert("You have lost your robot in battle! Game Over!");
       break;
@@ -130,17 +135,20 @@ var endGame = function () {
   var playAgainConfirm = window.confirm("Would you like to play again?");
 
   if (playAgainConfirm) {
+
     // restart the game
     startGame();
 
   } else {
     window.alert("Thank you for playing Robot Gladiators! Come back soon!");
     // after the loop ends, player is either out of health or enemies to fight, so run the endGame function
-    
+  
   }
 }
 
 
-
+var shop = function() {
+  console.log("entered the shop");
+};
 // start the game when the page loads
 startGame();
