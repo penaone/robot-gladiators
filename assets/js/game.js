@@ -220,6 +220,7 @@ var randomNumber = function (min, max) {
 };
 
 // function to end the entire game
+//Final function
 var endGame = function() {
   window.alert("The game has now ended. Let's see how you did!");
 
